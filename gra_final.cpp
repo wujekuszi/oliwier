@@ -13,7 +13,7 @@ void wyswietlPlansze() {
      for(int j=0; j<3; j++){
         cout << plansza[i][j];
         if (j<2) cout << " / ";
-     }   
+     }
      cout << "\n";
      if (i<2) cout << "---+---+---\n";
     }
@@ -21,21 +21,21 @@ void wyswietlPlansze() {
 }
 bool sprawdzWygrana(char znak) {
     // Sprawdzenie wierszy
-    for (int i = 0; i < 3; i++) 
+    for (int i = 0; i < 3; i++)
     if (plansza[i][0] == znak && plansza[i][1] == znak && plansza[i][2] == znak) {
         return true;
     }
     for (int i = 0; i< 3; i++){
-        if (plansza[0][i] == znak && plansza[1][i] == znak && plansza[2][i] == znak) 
+        if (plansza[0][i] == znak && plansza[1][i] == znak && plansza[2][i] == znak)
             return true;
-        
+
     }
     // Sprawdzenie przekątnych
-    if (plansza[0][0] == znak && plansza[1][1] == znak && plansza[2][2] == znak) 
+    if (plansza[0][0] == znak && plansza[1][1] == znak && plansza[2][2] == znak)
         return true;
-    
-    if (plansza[0][2] == znak && plansza[1][1] == znak && plansza[2][0] == znak) 
+
+    if (plansza[0][2] == znak && plansza[1][1] == znak && plansza[2][0] == znak)
         return true;
-    
+
     return false;
     }
